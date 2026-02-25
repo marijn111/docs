@@ -316,7 +316,7 @@ const client = generateClient<Schema>();
 const selectionSet = ['content', 'blog.author.*', 'comments.*'] as const;
 
 type PostWithComments = SelectionSet<
-  Schema['Post']['type'],
+  Schema['Post'],
   typeof selectionSet
 >;
 
